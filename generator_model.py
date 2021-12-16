@@ -69,3 +69,7 @@ class Generator(nn.Module):
         return torch.tanh(self.last(x))
     
 
+tensor = torch.randn((3,5,5))
+tensor = tensor[None,:]
+a = ConvBlock(3, 64,kernel_size=1)
+b = a(tensor)
